@@ -18,7 +18,7 @@ var Todoist = function (email, pass, cb) {
 				return;
 			}
 			this.user = data;
-			cb(null, resp, this.user);
+			cb(null, resp, this.user).call(this);
 			return;
 		}.bind(this));
 	return this;
